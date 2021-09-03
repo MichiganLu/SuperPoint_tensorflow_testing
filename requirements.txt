@@ -1,0 +1,11 @@
+tensorflow==1.13.1
+tensorflow-gpu==1.13.1
+pandas
+numpy
+scipy
+opencv-python==3.4.2.17
+opencv-contrib-python==3.4.2.17
+tqdm
+pyyaml
+flake8
+jupyter
