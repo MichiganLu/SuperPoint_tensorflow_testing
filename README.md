@@ -16,13 +16,13 @@ weights. This can be easily done with the following command being run from the `
 ```
 tar -xzvf sp_v6.tgz
 ```
-Switch to `SuperPoint` directory and create output folder
+Switch back to `SuperPoint` directory and create output folder
 ```
-mkdir output
+mkdir output && cd ./superpoint
 ```
 
 With the pretrained weights extracted, you can run the `match_features_customize.py`
-to test SuperPoint on the EuRoc dataset. Execute the following command under `SuperPoint` directory:
+to test SuperPoint on the EuRoc dataset. Execute the following command:
 ```
 python match_features_customize.py --weights /home/your_SuperPoint_directory/SuperPoint/pretrained_models/sp_v6 --img_path /home/your_EuRoc_images_directory/ --gtcsv /home/your_EuRoc_pose_ground_truth_dataset_directory/data.csv --k_best 1000
 ```
