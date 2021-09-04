@@ -20,11 +20,11 @@ tar -xzvf sp_v6.tgz
 With the pretrained weights extracted, you can run the `match_features_customize.py`
 to test SuperPoint on the EuRoc dataset:
 ```
-python match_features_customize.py --weights /home/cvte-vm/Deep_Feature_Extract/SuperPoint/pretrained_models/sp_v6 --img_path /home/cvte-vm/Datasets/EuRoc/MH_03_medium/mav0/cam0/data/ --gtcsv /home/cvte-vm/Datasets/EuRoc/MH_03_medium/mav0/state_groundtruth_estimate0/data.csv
+python match_features_customize.py --weights /home/your_SuperPoint_directory/SuperPoint/pretrained_models/sp_v6 --img_path /home/your_EuRoc_images_directory/ --gtcsv /home/your_EuRoc_pose_ground_truth_dataset_directory/data.csv --k_best 1000
 ```
 The first argument is the directory of your extracted weights. The second argument is the directory of your dataset
-(remember to add '/' at the end). The third directory is the ground truth csv file for the drone. It is needed to make 
-evaluation.
+(remember to add '/' at the end). The third directory is the ground truth pose csv file for the drone. It is needed to make 
+evaluation, but the program can still extract matchings without the ground truth csv.
 Note that you can also pass in additional arguments such as `--H`, `--W`,
 `--k_best` to specify the height and width to resize the images and the maximum
 number of keypoints you wish to keep from the detection process.
